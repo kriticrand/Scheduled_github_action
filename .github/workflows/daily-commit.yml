@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '54 18 * * *'   # Runs daily at 12:24 AM IST (6:54 PM UTC)
+    - cron: '57 18 * * *'   # Runs daily at 12:24 AM IST (6:54 PM UTC)
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,6 @@ jobs:
 
       - name: Update daily.txt with timestamp (24f1001182@ds.study.iitm.ac.in)
         run: echo "Last run: $(date -u)" > daily.txt
-
 
       - name: Commit and push changes
         run: |

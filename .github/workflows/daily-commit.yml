@@ -9,11 +9,11 @@ jobs:
   daily-commit:
     runs-on: ubuntu-latest
     steps:
-      steps:
-  - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-  - name: Update daily.txt with timestamp (24f1001182@ds.study.iitm.ac.in)
-    run: echo "Last run: $(date -u)" > daily.txt
+      - name: Update daily.txt with timestamp (24f1001182@ds.study.iitm.ac.in)
+        run: echo "Last run: $(date -u)" > daily.txt
+
 
       - name: Commit and push changes
         run: |
